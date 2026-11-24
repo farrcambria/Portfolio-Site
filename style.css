@@ -1,0 +1,411 @@
+
+/*header navigation*/
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #6ab9c5;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.grid1 {
+    flex-shrink: 0;
+}
+
+.grid1 a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: "montserrat", serif;
+    padding: 14px 0;
+}
+
+.grid1 p {
+    margin: 0;
+}
+
+.grid2 {
+    flex-shrink: 0;
+}
+
+/*navigation bar*/
+/*navigation bar*/
+.grid2 ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid2 ul li {
+    flex-shrink: 0;
+}
+
+.grid2 ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-family: "montserrat", sans-serif;
+    white-space: nowrap;
+}
+
+.grid2 ul li a.active {
+    background-color: #ff7eb3;
+}
+
+.grid2 ul li a:hover {
+    background-color: #ffcb77;
+}
+
+.header-container {
+    margin-left: 10vw;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.header-container h1 {
+    font-size: 11vw;
+    margin: 0;
+    padding: 0;
+}
+
+/*continue button*/
+.continuebutton {
+    display: inline-block;
+    font-size: clamp(16px, 1.5vw, 20px);
+    padding: clamp(8px, 0.8vw, 10px) clamp(12px, 1.5vw, 20px);
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.continuebutton:hover {
+    background-color: rgb(254, 109, 115);
+    color: white;
+    border-color: rgb(190, 67, 88);
+    transition: 0.3s;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/*portfolio heading*/
+.portfolio-heading {
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.portfolio-heading h1 {
+    font-size: clamp(40px, 8vw, 100px);
+    margin: 0;
+    text-align: left;
+    font-family: "Hurricane";
+}
+
+/*portfolio image gallery*/
+.portfolio-gallery {
+   
+  display: grid-lanes;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-rows: auto;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.portfolio-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/*individual portfolio items*/
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/*images*/
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*color overlay*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(247, 41, 68, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/*show overlay on hover*/
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/*title text*/
+.overlay h2 {
+    color: white;
+    font-size: clamp(18px, 2vw, 30px);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*about page*/
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 100px 50px;
+    align-items: center;
+}
+
+/*about page*/
+
+.works-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 100px 50px;
+    align-items: center;
+}
+
+/*image*/
+.profile-image img {
+    width: 45vw;
+    height: auto;
+    display: block;
+}
+
+.works-image img {
+    width: 66vw;
+    height: auto;
+    display: block;
+}
+
+
+/*text*/
+.about-text {
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: clamp(30px, 8vw, 100px);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: clamp(10px, 1.5vw, 20px);
+    line-height: 1.6;
+}
+
+/*text*/
+.works-text {
+    text-align: left;
+}
+
+.works-text h1 {
+    font-size: clamp(10px, 6vw, 30px);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "montserrat", sans-serif;
+}
+
+.works-text p {
+    font-size: clamp(10px, 1.5vw, 20px);
+    line-height: 1.6;
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+}
+
+/*smaller screens*/
+@media (max-width: 600px) {
+    .grid-container {
+        padding: 0 8px;
+    }
+
+    .grid1 a {
+        font-size: 12px;
+    }
+
+    .grid2 ul li a {
+        font-size: 11px;
+        padding: 14px 6px;
+    }
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+
+.hurricane-regular {
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*CV section*/
+.cv-section {
+    margin: 120px 50px;
+}
+
+/*CV heading*/
+.cv-heading {
+    margin-bottom: 60px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.cv-heading h1 {
+    font-size: clamp(50px, 10vw, 120px);
+    margin: 0;
+    font-weight: 500;
+}
+
+.cv-heading p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 5px 0;
+}
+
+/*CV content layout*/
+.cv-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
+    row-gap: 45px;
+}
+
+/*Category headings*/
+.cv-category h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/*CV information*/
+.cv-details {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 25px;
+}
+
+.cv-entry {
+    margin-bottom: 30px;
+}
+
+.cv-entry:last-child {
+    margin-bottom: 0;
+}
+
+.cv-entry-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.cv-entry-heading h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cv-entry-heading span {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.cv-entry p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.cv-entry .cv-subtitle {
+    font-weight: 600;
+}
+
+/*Skills*/
+.cv-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+.cv-skills p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/*Responsive CV*/
+@media (max-width: 650px) {
+    .cv-section {
+        margin: 70px 20px;
+    }
+
+    .cv-content {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+    .cv-category {
+        margin-top: 25px;
+    }
+
+    .cv-details {
+        margin-bottom: 15px;
+    }
+
+    .cv-entry-heading {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .cv-skills {
+        grid-template-columns: 1fr 1fr;
+    }
+}

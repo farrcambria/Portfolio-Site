@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Net Art"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Cambria Portfolio"
+	}
+}
